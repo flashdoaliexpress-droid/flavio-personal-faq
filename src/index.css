@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 220 15% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
+
+    --primary: 211 91% 8%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 20% 96%;
+    --secondary-foreground: 211 91% 8%;
+
+    --muted: 214 20% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 0 0% 100%;
+    --accent-foreground: 211 91% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 15% 88%;
+    --input: 214 15% 88%;
+    --ring: 211 91% 8%;
+
+    --radius: 0rem;
+
+    --hero-dark: 211 91% 8%;
+    --hero-dark-foreground: 0 0% 95%;
+
+    --section-alt: 214 30% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bg-navy {
+    background-color: #021329;
+  }
+
+  .text-navy {
+    color: #021329;
+  }
+
+  .bg-hero-dark {
+    background-color: hsl(var(--hero-dark));
+  }
+
+  .text-hero-light {
+    color: hsl(var(--hero-dark-foreground));
+  }
+
+  .bg-section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+}
