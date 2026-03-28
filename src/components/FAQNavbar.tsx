@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "@/assets/Logo.png";
 
-const SITE_URL = "http://localhost:8080";
+const SITE_URL = "https://personal-flavio.vercel.app/";
 
 const FAQNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
