@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "O plano alimentar está incluso?",
     answer:
-      "Sim, nos planos Completo e Elite o acompanhamento nutricional está incluído, com orientações práticas e ajustes regulares.",
+      "O plano alimentar está incluso apenas no Plano Elite com Nutri. Nos demais planos o foco é exclusivamente no treino personalizado.",
   },
   {
     question: "Com que frequência terei retorno do Flávio?",

@@ -19,14 +19,14 @@ const FAQNavbar = () => {
       }`}
     >
       <div className="container px-6 flex items-center justify-between py-5">
-        <a href="http://localhost:8081">
+        <a href="http://localhost:8080">
           <img src={Logo} alt="Flávio" className="h-20 w-auto" />
         </a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-10">
           <a
-            href="http://localhost:8081"
+            href="http://localhost:8080"
             className="text-white/50 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase font-medium"
           >
             ← Voltar ao site
@@ -55,7 +55,7 @@ const FAQNavbar = () => {
       {open && (
         <div className="md:hidden bg-[#021329] border-t border-white/10">
           <a
-            href="http://localhost:8081"
+            href="http://localhost:8080"
             onClick={() => setOpen(false)}
             className="block px-6 py-4 text-white/50 hover:text-white border-b border-white/5 transition-colors text-xs tracking-[0.2em] uppercase"
           >
