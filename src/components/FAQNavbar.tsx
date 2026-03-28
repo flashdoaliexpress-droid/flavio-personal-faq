@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "@/assets/Logo.png";
 
+const SITE_URL = "http://localhost:8080";
+
 const FAQNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -12,6 +14,10 @@ const FAQNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const goToSite = () => {
+    window.location.href = SITE_URL;
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 ${
@@ -19,18 +25,18 @@ const FAQNavbar = () => {
       }`}
     >
       <div className="container px-6 flex items-center justify-between py-5">
-        <a href="http://localhost:8080">
+        <button onClick={goToSite} className="cursor-pointer">
           <img src={Logo} alt="Flávio" className="h-20 w-auto" />
-        </a>
+        </button>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-10">
-          <a
-            href="http://localhost:8080"
-            className="text-white/50 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase font-medium"
+          <button
+            onClick={goToSite}
+            className="text-white/50 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase font-medium cursor-pointer"
           >
             ← Voltar ao site
-          </a>
+          </button>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfYWVGnLSLc6KYpqYMhe4-6W2c1UtUVpSPxpWt8DPM2Z4Tnng/viewform"
             target="_blank"
@@ -54,13 +60,12 @@ const FAQNavbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-[#021329] border-t border-white/10">
-          <a
-            href="http://localhost:8080"
-            onClick={() => setOpen(false)}
-            className="block px-6 py-4 text-white/50 hover:text-white border-b border-white/5 transition-colors text-xs tracking-[0.2em] uppercase"
+          <button
+            onClick={goToSite}
+            className="block w-full text-left px-6 py-4 text-white/50 hover:text-white border-b border-white/5 transition-colors text-xs tracking-[0.2em] uppercase cursor-pointer"
           >
             ← Voltar ao site
-          </a>
+          </button>
           <div className="p-6">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfYWVGnLSLc6KYpqYMhe4-6W2c1UtUVpSPxpWt8DPM2Z4Tnng/viewform"
