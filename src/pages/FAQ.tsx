@@ -138,14 +138,24 @@ const FAQ = () => {
             <p className="text-white/30 text-sm mb-6">
               Não encontrou sua dúvida? Fala comigo diretamente.
             </p>
-            <a
-              href="https://wa.me/5519983492257"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border border-white/50 text-white text-xs tracking-[0.2em] uppercase font-medium px-8 py-3 hover:bg-white hover:text-[#021329] transition-all duration-200"
-            >
-              Falar no WhatsApp
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://wa.me/5519983492257"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-white/50 text-white text-xs tracking-[0.2em] uppercase font-medium px-8 py-3 hover:bg-white hover:text-[#021329] transition-all duration-200"
+              >
+                Falar no WhatsApp
+              </a>
+              <a
+                href="https://forms.gle/zQKGmZsuonuLFBkf7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-[#021329] text-xs tracking-[0.2em] uppercase font-medium px-8 py-3 hover:bg-white/90 transition-all duration-200"
+              >
+                Comece Agora
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
