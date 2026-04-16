@@ -39,7 +39,7 @@ const FAQNavbar = () => {
             ← Voltar ao site
           </a>
           <a
-            href="https://wa.me/5519983492257"
+            href="https://forms.gle/zQKGmZsuonuLFBkf7"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white/50 text-white text-xs tracking-[0.2em] uppercase font-medium px-6 py-2.5 hover:bg-white hover:text-[#021329] transition-all duration-200"
@@ -70,7 +70,7 @@ const FAQNavbar = () => {
           </a>
           <div className="p-6">
             <a
-              href="https://wa.me/5519983492257"
+              href="https://forms.gle/zQKGmZsuonuLFBkf7"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
