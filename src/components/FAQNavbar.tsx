@@ -16,7 +16,7 @@ const FAQNavbar = () => {
     if (hostname.includes("localhost") || hostname.includes("127.0.0.1")) {
       return "http://localhost:8080";
     }
-    return "https://site-flavio.vercel.app";
+    return "https://personal-flavio.vercel.app";
   };
 
   return (
