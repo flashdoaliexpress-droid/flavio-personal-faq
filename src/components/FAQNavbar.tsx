@@ -11,6 +11,14 @@ const FAQNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const getSiteLink = () => {
+    const hostname = window.location.hostname;
+    if (hostname.includes("localhost") || hostname.includes("127.0.0.1")) {
+      return "http://localhost:8080";
+    }
+    return "https://site-flavio.vercel.app";
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 ${
@@ -25,7 +33,7 @@ const FAQNavbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-10">
           <a
-            href="/"
+            href={getSiteLink()}
             className="text-white/50 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase font-medium"
           >
             ← Voltar ao site
@@ -54,7 +62,7 @@ const FAQNavbar = () => {
       {open && (
         <div className="md:hidden bg-[#021329] border-t border-white/10">
           <a
-            href="/"
+            href={getSiteLink()}
             onClick={() => setOpen(false)}
             className="block px-6 py-4 text-white/50 hover:text-white border-b border-white/5 transition-colors text-xs tracking-[0.2em] uppercase"
           >
